@@ -1,3 +1,5 @@
+using System.ComponentModel.Design;
+
 namespace TrybeGames;
 
 public class TrybeGamesDatabase
@@ -24,14 +26,24 @@ public class TrybeGamesDatabase
     public List<Game> GetGamesPlayedBy(Player player)
     {
         // Implementar
-        throw new NotImplementedException();
+        var gamesPlayed =
+                         from game in Games
+                         where game.Players.Contains(player.Id)
+                         select game;
+
+        return gamesPlayed.ToList();
     }
 
     // 6. Crie a funcionalidade de buscar jogos comprados por uma pessoa jogadora
     public List<Game> GetGamesOwnedBy(Player playerEntry)
     {
         // Implementar
-        throw new NotImplementedException();
+        var gamesOwned =
+                       from game in Games
+                       where playerEntry.GamesOwned.Contains(game.Id)
+                       select game;
+
+        return gamesOwned.ToList();
     }
 
 
@@ -39,7 +51,17 @@ public class TrybeGamesDatabase
     public List<GameWithStudio> GetGamesWithStudio()
     {
         // Implementar
-        throw new NotImplementedException();
+        var gamesByStudio =
+                            from game in Games
+                            join studio in GameStudios on game.DeveloperStudio equals studio.Id
+                            select new GameWithStudio
+                            {
+                                GameName = game.Name,
+                                StudioName = studio.Name,
+                                NumberOfPlayers = game.Players.Count
+                            };
+
+        return gamesByStudio.ToList();
     }
 
     // 8. Crie a funcionalidade de buscar todos os diferentes Tipos de jogos dentre os jogos cadastrados
