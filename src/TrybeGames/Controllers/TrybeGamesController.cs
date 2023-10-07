@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.Runtime.InteropServices;
 
 namespace TrybeGames;
 public class TrybeGamesController
@@ -156,8 +157,73 @@ public class TrybeGamesController
     public void AddGame()
     {
         // implementar
-        Console.WriteLine("Ainda não é possível realizar essa funcionalidade!");
+        Game newGame = new()
+        {
+            Id = database.Games.Count + 1
+        };
+
+
+        Console.WriteLine("Digite o nome do game:");
+        newGame.Name = Console.ReadLine() ?? "";
+
+
+        Console.WriteLine("Digite a data de lançamento:");
+        string dateString = Console.ReadLine();
+
+        string format = "yyyy-MM-dd";
+
+        try
+        {
+            DateTime parsedDate = DateTime.ParseExact(dateString, format, CultureInfo.InvariantCulture);
+            newGame.ReleaseDate = parsedDate;
+        }
+        catch (FormatException)
+        {
+            Console.WriteLine("Invalid date format. Please enter a valid date in yyyy-MM-dd format.");
+        }
+
+
+        Console.WriteLine("Digite o Tipo do Game");
+        var menu = 0;
+        while (menu != 5)
+        {
+            PrintGameTypes();
+            menu = int.Parse(Console.ReadLine() ?? "0");
+            switch (menu)
+            {
+                case 1:
+                    newGame.GameType = GameType.Action;
+                    break;
+                case 2:
+                    newGame.GameType = GameType.Adventure;
+                    break;
+                case 3:
+                    newGame.GameType = GameType.Puzzle;
+                    break;
+                case 4:
+                    newGame.GameType = GameType.Strategy;
+                    break;
+                case 5:
+                    break;
+                case 6:
+                    newGame.GameType = GameType.Simulation;
+                    break;
+                case 7:
+                    newGame.GameType = GameType.Sports;
+                    break;
+                case 8:
+                    newGame.GameType = GameType.Other;
+                    break;
+                default:
+                    Console.WriteLine("Opção inválida! Tente novamente.");
+                    break;
+            }
+        }
+
     }
+
+
+
 
     public void ChangeGameStudio(Game game)
     {
