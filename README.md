@@ -52,11 +52,3 @@ Contribuições são bem-vindas! Se você deseja contribuir para este projeto, s
 5. Abra um pull request para revisão.
 
 
-### Contato
-
-<div align="left">
-  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="90" height="40" alt="linkedin logo"  />
-  <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/gmail/default.svg" width="90" height="40" alt="gmail logo"  />
-</div>
-
-###
