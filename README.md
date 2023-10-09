@@ -1,10 +1,10 @@
 # TrybeGames
 
-## Descrição do Projeto
+### Descrição do Projeto
 
 TrybeGames é um sistema de gerenciamento de jogos, estúdios e jogadores, onde você pode adicionar, buscar e listar informações sobre jogos, estúdios e jogadores. Este projeto foi desenvolvido como parte de um desafio de programação.
 
-## Funcionalidades
+### Funcionalidades
 
 - Adicionar uma nova pessoa jogadora ao banco de dados.
 - Adicionar um novo estúdio de jogos ao banco de dados.
@@ -25,26 +25,26 @@ TrybeGames é um sistema de gerenciamento de jogos, estúdios e jogadores, onde 
 
 1. Clone o repositório para sua máquina local.
    ```
-   sasasasasasas
+     git clone git@github.com:gabesouto/LINQ-Game-Project.git
    ```
 3. Abra o terminal na pasta raiz do projeto.
 4. Execute `dotnet run` para instalar as dependências do projeto.
 5. Execute `dotnet build` para compilar o projeto.
 6. Execute `dotnet run` para iniciar o aplicativo.
 
-## Uso
+### Uso
 
 1. Siga as instruções no console para interagir com as funcionalidades do TrybeGames.
 2. Use os comandos correspondentes para adicionar, buscar e listar informações conforme necessário.
 
-## Estrutura do Projeto
+### Estrutura do Projeto
 
 - `src/` - Contém o código-fonte do projeto.
   - `TrybeGamesController.cs` - Classe que controla as interações do usuário.
   - `Database/` - Pasta que contém as classes relacionadas ao banco de dados.
   - Outros arquivos e pastas conforme a estrutura do seu projeto.
 
-## Contribuição
+### Contribuição
 
 Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga os passos abaixo:
 
@@ -55,7 +55,7 @@ Contribuições são bem-vindas! Se você deseja contribuir para este projeto, s
 5. Abra um pull request para revisão.
 
 
-## Contato
+### Contato
 
 <div align="left">
   <img src="https://raw.githubusercontent.com/maurodesouza/profile-readme-generator/master/src/assets/icons/social/linkedin/default.svg" width="90" height="40" alt="linkedin logo"  />
