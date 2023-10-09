@@ -16,10 +16,7 @@ TrybeGames é um sistema de gerenciamento de jogos, estúdios e jogadores, onde 
 - Buscar todos os diferentes tipos de jogos dentre os jogos cadastrados.
 - Buscar todos os estúdios de jogos junto com seus jogos desenvolvidos e suas pessoas jogadoras.
 
-## Pré-requisitos
 
-- .NET Core SDK (versão X.X.X)
-- Outros pré-requisitos específicos do seu projeto, como banco de dados, bibliotecas externas, etc.
 
 ## Instalação
 
